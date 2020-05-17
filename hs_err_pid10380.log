@@ -6,7 +6,7 @@
 # JRE version: Java(TM) SE Runtime Environment (8.0_241-b07) (build 1.8.0_241-b07)
 # Java VM: Java HotSpot(TM) 64-Bit Server VM (25.241-b07 mixed mode windows-amd64 compressed oops)
 # Problematic frame:
-# j  com.wrn.collection.list.ArrayImp.getNewArrayMoveLeft([Ljava/lang/String;)[Ljava/lang/String;+27
+# j  com.wrn.array.ArrayImp.getNewArrayMoveLeft([Ljava/lang/String;)[Ljava/lang/String;+27
 #
 # Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
 #
@@ -150,13 +150,13 @@ Event: 0.275 Thread 0x0000000002c3e800 Uncommon trap: reason=unstable_if action=
 Event: 0.275 Thread 0x0000000002c3e800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000031657f4 method=org.eclipse.jdt.launching.internal.org.objectweb.asm.ByteVector.putUTF8(Ljava/lang/String;)Lorg/eclipse/jdt/launching/internal/org/objectweb/asm/ByteVector; @ 100
 
 Classes redefined (7 events):
-Event: 34.871 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=1
-Event: 69.436 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=2
-Event: 184.080 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=3
-Event: 214.539 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=4
-Event: 219.725 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=5
-Event: 237.236 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=6
-Event: 294.500 Thread 0x000000001c92a000 redefined class name=com.wrn.collection.list.ArrayImp, count=7
+Event: 34.871 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=1
+Event: 69.436 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=2
+Event: 184.080 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=3
+Event: 214.539 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=4
+Event: 219.725 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=5
+Event: 237.236 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=6
+Event: 294.500 Thread 0x000000001c92a000 redefined class name=com.wrn.array.ArrayImp, count=7
 
 Internal exceptions (6 events):
 Event: 0.030 Thread 0x0000000002c3e800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076bb07cc0) thrown at [C:\ade\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u241\331\
@@ -243,7 +243,7 @@ Dynamic libraries:
 
 VM Arguments:
 jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:64023 -ea -javaagent:C:\Users\wanes\eclipse\jee-2019-12\eclipse\configuration\org.eclipse.osgi\411\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=Cp1252 
-java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 64022 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -test com.wrn.collection.list.ArrayImplTest:testMoveToLeft
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 64022 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -test com.wrn.array.ArrayImplTest:testMoveToLeft
 java_class_path (initial): C:\Users\wanes\workspace\data-structure-java\target\test-classes;C:\Users\wanes\workspace\data-structure-java\target\classes;C:\Users\wanes\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;C:\Users\wanes\eclipse\jee-2019-12\eclipse\configuration\org.eclipse.osgi\409\0\.cp;C:\Users\wanes\eclipse\jee-2019-12\eclipse\configuration\org.eclipse.osgi\408\0\.cp;C:\Users\wanes\eclipse\jee-2019-12\eclipse\configuration\org.eclipse.osgi\411\0\.cp\lib\javaagent-shaded.jar
 Launcher Type: SUN_STANDARD
 

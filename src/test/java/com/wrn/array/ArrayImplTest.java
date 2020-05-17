@@ -1,10 +1,12 @@
-package com.wrn.collection.list;
+package com.wrn.array;
 
 import static org.junit.Assert.*;
 
 import java.util.List;
 
 import org.junit.Test;
+
+import com.wrn.array.ArrayImp;
 
 public class ArrayImplTest {
 

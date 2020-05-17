@@ -1,4 +1,4 @@
-package com.wrn.collection.list;
+package com.wrn.array;
 
 import java.util.Arrays;
 import java.util.List;
