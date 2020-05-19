@@ -1,72 +1,74 @@
 package com.wrn.collection.list;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 import org.junit.Test;
 
 import com.wrn.util.ForEachUtilsTesting;
 
-
-public class ArrayListImpTest {
+public class VectorImplTest {
 	
-	private ArrayListImp arrayListImp = new ArrayListImp();
-	private List<String> listString = new ArrayList<>(Arrays.asList("1","2","3","4", "5"));
+	private List<String> listString = new Vector<>(Arrays.asList("1","2","3", "4", "5"));
+	private VectorImpl vectorImp = new VectorImpl();
 	private ForEachUtilsTesting utils = new ForEachUtilsTesting();
 
 	@Test
-	public void testSize() {
-		assertEquals(5, listString.size());
+	public void testVectorImpNull() {
+		//The size of the Vector does not is count if the position is null
+		List<String> stringLinkeList = new LinkedList<String>(Arrays.asList(null,null,null,null,null));
+		int size = vectorImp.getSize(stringLinkeList);
+		assertEquals(5, size);
 	}
-
+	
 	@Test
-	public void testSizeNull() {
-		List<String> listString = new ArrayList<>(Arrays.asList(null,null,null,null,null));
-		assertEquals(5, listString.size());
+	public void testVectorWithValues() {
+		assertEquals(5, vectorImp.getSize(listString));
 	}
 	
 	@Test
 	public void testSortBy() {
-		List<String> listString = new ArrayList<>(Arrays.asList("4","1","5","2", "3"));
-		List<String> listReturned = arrayListImp.sortBy(listString);
-		String listConvertedToString = utils.forEach(listReturned);
-		assertEquals("12345", listConvertedToString);
+		List<String> stringLinkeList = new Vector<String>(Arrays.asList("5","3","1","4","2"));
+		assertEquals("12345", utils.forEach(vectorImp.sortBy(stringLinkeList)));
 	}
 	
 	@Test
 	public void testListConvertToArray() {
-		String [] listReturned = arrayListImp.convertToArray(listString);
+		String [] listReturned = vectorImp.convertToArray(listString);
 		String listConvertedToString = utils.goThroughArray(listReturned);
 		assertEquals("12345", listConvertedToString);
 	}
 	
 	@Test
 	public void testInsertItemDeterminedPosition() {
-		List<String> listReturned = arrayListImp.insertItemDeterminedPosition(listString, "0", 0);
+		List<String> listReturned = vectorImp.insertItemDeterminedPosition(listString, "0", 0);
 		String listConvertedToString = utils.forEach(listReturned);
 		assertEquals("012345", listConvertedToString);
 	}
 	
 	@Test
 	public void testRemoveItemDeterminedPosition() {
-		List<String> listReturned = arrayListImp.removeItemDeterminedPosition(listString, 0);
+		List<String> listReturned = vectorImp.removeItemDeterminedPosition(listString, 0);
 		String listConvertedToString = utils.forEach(listReturned);
 		assertEquals("2345", listConvertedToString);
 	}
 	
 	@Test
 	public void testRemoveItem() {
-		List<String> listReturned = arrayListImp.removeItem(listString, "2");
+		List<String> listReturned = vectorImp.removeItem(listString, "2");
 		String listConvertedToString = utils.forEach(listReturned);
 		assertEquals("1345", listConvertedToString);
 	}
 	
 	@Test
 	public void testClearList() {
-		List<String> listReturned = arrayListImp.removeItem(listString, "2");
+		List<String> listReturned = vectorImp.removeItem(listString, "2");
 		listReturned.clear();
 		assertEquals(0, listReturned.size());
 	}
@@ -96,4 +98,5 @@ public class ArrayListImpTest {
 	public void testIndexOf() {
 		assertEquals(1, listString.indexOf("2"));
 	}
+
 }

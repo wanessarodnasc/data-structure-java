@@ -2,7 +2,7 @@ package com.wrn.util;
 
 import java.util.List;
 
-public class ForEachUtilsTest {
+public class ForEachUtilsTesting {
 	
 	public String forEach(List<String> listReturned) {
 		StringBuilder listConvertedToString = new StringBuilder();

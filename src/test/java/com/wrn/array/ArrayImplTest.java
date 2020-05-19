@@ -1,19 +1,19 @@
 package com.wrn.array;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
 import org.junit.Test;
 
-import com.wrn.array.ArrayImp;
-import com.wrn.util.ForEachUtilsTest;
+import com.wrn.util.ForEachUtilsTesting;
 
 public class ArrayImplTest {
 
 	private ArrayImp arrayImp = new ArrayImp();
 	private String[] array = {"1","2","3","4","5"};
-	private ForEachUtilsTest utils = new ForEachUtilsTest();
+	private ForEachUtilsTesting utils = new ForEachUtilsTesting();
 	
 	@Test
 	public void testArrayImpNull() {

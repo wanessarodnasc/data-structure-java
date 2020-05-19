@@ -1,20 +1,10 @@
 package com.wrn.collection.list;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class LinkedListImpl {
-
-	public int getSize(List<String> stringLinkeList) {
-		return stringLinkeList.size();
-	}
-
-	public List<String> sortedBy(List<String> stringLinkeList) {
-		Collections.sort(stringLinkeList);
-		return stringLinkeList;
-	}
+public class LinkedListImpl extends CollectionImpl {
 
 	public List<String> addElementFirst(LinkedList<String> stringLinkeList, String element) {
 		stringLinkeList.addFirst(element);

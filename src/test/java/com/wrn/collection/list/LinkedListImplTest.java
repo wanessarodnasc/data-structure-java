@@ -8,18 +8,18 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.wrn.util.ForEachUtilsTest;
+import com.wrn.util.ForEachUtilsTesting;
 
 public class LinkedListImplTest {
 
 	LinkedList<String> stringLinkeList = new LinkedList<String>(Arrays.asList("1","2","3","4","5"));
 	private LinkedListImpl linkedListImpl = new LinkedListImpl();
-	private ForEachUtilsTest utils = new ForEachUtilsTest();
+	private ForEachUtilsTesting utils = new ForEachUtilsTesting();
 	
 	@Test
 	public void testArrayImpNull() {
 		//The size of the array is count if the position is null
-		LinkedList<String> stringLinkeList = new LinkedList<String>(Arrays.asList(null,null,null,null,null));
+		List<String> stringLinkeList = new LinkedList<String>(Arrays.asList(null,null,null,null,null));
 		int size = linkedListImpl.getSize(stringLinkeList);
 		assertEquals(5, size);
 	}
@@ -38,7 +38,7 @@ public class LinkedListImplTest {
 	@Test
 	public void testSortBy() {
 		LinkedList<String> stringLinkeList = new LinkedList<String>(Arrays.asList("5","3","1","4","2"));
-		assertEquals("12345", utils.forEach(linkedListImpl.sortedBy(stringLinkeList)));
+		assertEquals("12345", utils.forEach(linkedListImpl.sortBy(stringLinkeList)));
 	}
 	
 	@Test
@@ -80,7 +80,7 @@ public class LinkedListImplTest {
 
 	@Test
 	public void testAddElementsAeddJustOneIndes() {
-		LinkedList<String> stringLinkeList = new LinkedList<String>();
+		List<String> stringLinkeList = new LinkedList<String>();
 		stringLinkeList.add("1");
 		//it is possible because the 0 position already exist
 		//if you try stringLinkeList.add(2,"2"); it will not work because the index 2 does not exist yet
